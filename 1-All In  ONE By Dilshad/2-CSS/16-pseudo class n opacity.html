@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=G, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /* pseudo classes */
+        #one  p:first-child{
+            color: red;
+        }
+        #one p:last-child{
+            color: darkgoldenrod;
+        }
+
+
+
+        #two span:nth-child(1){
+            border: 2px solid red;
+        }
+        #two span:nth-child(3){
+            border: 2px solid red;
+        }
+        #two span:nth-child(2n){
+            border: 2px solid black;
+        }
+        /* #two span:nth-child(2n+1 or 2n-1)  where n=1,2,3... */
+
+
+        #three p:empty{
+            border: 3px solid red;
+            width: 100px;
+        }
+
+        #four span:not(.not){
+            color: blueviolet;
+        }
+
+
+
+        /* after image */
+          #form input[type="text"]:focus{
+             background-color: blue;
+          }
+          #form input[type="checkbox"]:checked{
+             box-shadow: 2px 2px 3px red;
+          }
+          #form input[type="checkbox"]:checked + label{
+             color: yellow;
+          }
+
+          #form  input:in-range{
+              border: 1px solid green;
+              background-color: wheat;
+          }
+          #form  input:out-of-range{
+              border: 1px solid red;
+              background-color:yellow ;
+          }
+
+
+          #form input:read-only{
+              background-color: blueviolet;
+          }
+          #form input:invalid{
+              background-color: red;
+          }
+
+          
+        #div5 p i:first-child{
+        	color: blue;
+        }
+
+        #div6 p:first-child i
+        {
+        	color: red;
+        }
+        
+
+
+
+
+
+
+
+        /* pseudo elements */
+        .one p::first-line{
+        	color: red;
+          background-color: cyan;
+        }
+
+        .two p::first-letter{
+        	color: red;
+        	font-size: 20px;
+        }
+
+
+        .three p::first-letter{
+        	color: green;
+        	font-size: 20px;
+        }
+
+        .three p::first-line{
+        	color: red;
+        	font-size: 20px;
+        }
+
+        .four .p1::first-letter{
+         color:red;
+         font-size: 25px;
+        }
+        .six p::selection{
+          color: red;
+          background: yellow;
+         }
+
+        .seven input[type="text"]::placeholder{
+           color: red;
+         }
+       
+
+        /* opacity */
+        .five p{
+        	background-color: blue;
+        	color: pink;
+        	width: 100px;
+        	height: 40px;
+        	opacity: 0.5;
+        }
+
+        .five p:hover{ 	
+        	opacity: 1;
+        }
+
+       
+	</style>
+</head>
+<body>
+
+<!-- pseudo Classes -->
+<h1 style="font-size: 50px;;color: powderblue;">pseudo clsess(:)</h1>
+<h3><u>:Firast-child:last-child:</u></h3>
+<div id="one">
+    <p>first paragraph</p>
+    <p>second paragraph</p>
+    <p>third paragraph</p>
+</div><br>
+
+
+<h3><u>:nth-child(x):</u></h3>
+<div id="two">
+   <span>one</span>
+   <span>two</span>
+   <span>three</span>
+   <span>four</span>
+</div><br>
+
+
+<h3><u>:empty :-</u></h3>
+<div id="three">
+    <p></p>
+    <p>1</p>
+</div><br>
+
+
+<h3><u>:not :-</u></h3>
+<div id="four">
+   <span>one</span>
+   <span class="not">two</span>
+   <span>three</span>
+   <span>four</span>
+</div> <hr><br><br><br>
+
+
+
+<img src="pseudo-class.png" alt="chart-of-pseudo-classes">
+<form action="#" id="form">
+      <p>First name : <input type="text" name="Fname"></p>
+      <p>hobby :
+        <input type="checkbox" name="hobby" value="sports"><label>sport</label>
+        <input type="checkbox" name="hobby" value="music"><label>music</label>
+        <input type="checkbox" name="hobby" value="travel"><label>clubing</label>
+        <input type="checkbox" name="hobby" value="books reading"><label>travel</label>
+    </p>
+    <p>Your Age : <input type="number" min="10" max="30" step="2"></p>
+      <p>last name  : <input type="text" name="Lname" value="dilshad" readonly ></p>
+      <p>Email  : <input type="email" name="email"></p>
+      
+</form>
+<br>
+
+
+
+<h1>div5</h1>
+<div id="div5">
+<p>I am a <i>strong</i> person. I am a <i>strong</i> person.</p>
+<p>I am a <i>strong</i> person. I am a <i>strong</i> person.</p></div>
+<br>
+
+<h1>div6</h1>
+<div id="div6">
+<p>I am a <i>strong</i> person. I am a <i>strong</i> person.</p>
+<p>I am a <i>strong</i> person. I am a <i>strong</i> person.</p>
+<br><br><br><br>
+
+
+
+
+
+
+<!-- pseudo Element -->
+
+<h1 style="font-size: 50px;;color: powderblue;">pseudo element(::)</h1>
+<div class="one">
+	<p>You can use the ::first-line pseudo-element to add a special effect to the first line of a text. Some more text. And even more, and more, and more, and more, and more, and more, and more, and more, and more, and more, and more, and more.</p>
+
+</div>
+
+<div class="two">
+	<p>You can use the ::first-line pseudo-element to add a special effect to the first line of a text. Some more text. And even more, and more, and more, and more, and more, and more, and more, and more, and more, and more, and more, and more.</p>
+
+</div>
+
+
+<div class="three">
+	<p>You can use the ::first-line pseudo-element to add a special effect to the first line of a text. Some more text. And even more, and more, and more, and more, and more, and more, and more, and more, and more, and more, and more, and more.</p>
+
+</div>
+
+<div class="four">
+	<p class="p1"> This is p1</p>
+	<p> this is p2</p>
+</div>
+<br>
+
+<h2 style="color: rgb(51, 101, 108);">Selection:</h2>
+<div class="six"><p>pecial effect to the first line of a text. Some more 
+  text. And even more, and more, and more, and more, 
+  and more, and more, and more, and more, and more,
+   and more, and more, and more.</p></div>
+<br>
+
+<h2>placeholder</h2>
+<form class="seven">
+  <input type="text" placeholder="enter name">
+</form>
+<br><br><br><br>
+
+
+<!-- opacity -->
+<h1 style="font-size: 50px;;color: powderblue;">opacity</h1>
+
+<div  style="width: 100px;height: 50px; background-color:red;color: white;text-align: center;padding-top: 10px;opacity: 0.3">
+	<p>this is khan</p>
+</div>
+
+<div class="five">
+	<p>thiss is opacity effect by hover</p>
+</div>
+
+</body>
+</html>

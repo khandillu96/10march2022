@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+/* unvisited link */
+ #links a{
+  color: white;
+}
+#links a:link {
+  background-color: blue;
+  text-decoration: none;
+}
+
+/* mouse over link */
+#links a:hover {
+  color: hotpink;
+  background-color: red;
+}
+
+/* selected link */
+#links a:active {
+  color: white;
+  background-color: black;
+}
+
+/* visited link (for practice uncomment after practcie then comment)*/
+/* #links a:visited {
+  color: white;
+  background-color: cyan;
+} */ 
+
+
+
+/* target */
+#target p:target{
+  background-color: black;
+  color: white;
+}
+
+#list-style-img {
+  list-style-image: url('arrow.png');
+  color:blue;
+}
+ol
+{
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+
+</style>
+</head>
+<body>
+  <h1>css link</h1>
+  1-:link  <br>
+  2-:hover <br>
+  3-:visited <br>
+  4-:active <br>
+  <div id="links">
+  <a href="https://www.w3schools.com/css/" target="_blank">This is a link</a>
+</div>
+  <br><br><br>
+  
+  
+  
+  <h1>:target :-</h1>
+  <ul>
+    <li><a href="#html">html</a></li>
+    <li><a href="#css">css</a></li>
+    <li><a href="#js">javascript</a></li>
+  </ul>
+  <div id="target">
+  <p id="html">html : Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+  <p id="css">css : Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+  <p id="js">js : Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+ </div> 
+  <br><br><br><br>
+  
+  
+  <h1>CSS Lists</h1>
+  <p>list-style:-<br>
+    list-style-image;<br>
+    list-style-type;<br>
+    list-style-position(baki hai padna);
+  </p>
+  <ul id="list-style-img">
+    <li>Coffee</li>
+    <li>Tea</li>
+    <li>Coca Cola</li>
+  </ul>
+  
+    
+  <ol>
+    <li>Coffee</li>
+    <li>Tea</li>
+    <li>Coca Cola</li>
+  </ol>
+  <br><br><br><br><br>
+  </body>
+  </html>

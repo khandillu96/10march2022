@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style >
+
+		/* simple Selecor */
+		/* p{
+			color: red;
+		} remove commnet see diff*/        
+	 
+		.one{
+			color: green;
+		}
+		#one{
+			color:blue
+		}
+		#two *{
+           color: rgb(6, 39, 28);
+		   border:1px solid black ;
+		}
+
+
+
+		/* advanced selectors */
+		/* 1-Descendant Selctors */
+		#des p{
+			color: blue;
+		}
+		#des .des{
+			color: red;
+		}
+
+        /* 2-Direct Child Selctors */
+		#direct1  p{
+			color: green;
+		}
+		#direct1 > p{
+			color: brown;
+		}
+		
+		#direct2  li {
+			color: green;
+		}
+		#direct2 > li{
+			color: brown;
+		}
+
+		/* 3-Adjucent Sibling Selctors */
+		#adjucent + p{
+			color: red;
+		}
+
+        /* 4-General Sibling Selctors */
+		#general ~ p{
+			color: blue;
+		}
+
+
+
+
+		/* attr selectors */
+        a[target]{
+			color: red;
+		}
+		a[class="anchor"]{
+			color: aqua;
+			border-bottom:2px solid black ;
+		}
+		input[type]{
+			border: 1px  solid red;
+		}
+		input[name="name"]{
+			border: 2px  solid blueviolet;
+		}
+		input[type="password"]{
+			border: 3px solid rgb(112, 164, 236);
+		}
+
+
+
+
+	</style>
+</head>
+<body>
+
+
+
+	<!--  simple Selecor  -->
+    <h1>Simple selectors</h1>
+    <p>Element selectors</p>
+    <p class="one">class selectros</p>
+    <p id="one">id selctors</p>
+	<div id="two">
+		<span>Universal Selectors</span>
+		<span>Universal Selectors</span>
+	</div>
+    <br><br><br><br><br><br><br><br>
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+	<!-- advanced selectors -->
+	<h1>Advance Selectors(Combinaotrs Selectors)</h1>
+	<h3>1-Descendant Selctors</h3>
+	<div id="des">
+		<p>paragraph  of Descendant Selctors </p>
+		<span class="des">span of Descendant Selctors </span>
+	</div>
+	<br><br><br>
+    
+
+
+
+	<h3>2-Direct Child Selctors</h3>
+	<div id="direct1">
+		<p>paragraph  of driect child Selctors </p>
+		<div>
+		  <p>span of driect child Selctors </p>
+	    </div>
+	</div>
+
+	<ul id="direct2">
+		<li>one</li>
+		<li>two
+			<ul>
+				<li>two one</li>
+				<li>tow two</li>
+			</ul>
+		</li>
+		<li>three</li>
+		<li>four</li>
+	</ul>
+	<br><br><br>
+
+
+
+
+	<h3>3-Adjucent Sibling Selctors</h3>
+	<div id="adjucent"></div>
+	<p>paragraph  of Adjucent Sibling Selctors select only adjucent(1st) paragraph </p>
+	<p>paragraph  of Adjucent Sibling Selctors not select  adjucent(2nd) paragraph </p>
+    <br><br><br>
+
+
+
+
+	<h3>4-General Sibling Selctors</h3>
+	<div id="general"></div>
+	<p>paragraph  of Adjucent Sibling Selctors select all general Sibling paragraph </p>
+	<p>paragraph  of Adjucent Sibling Selctors select  all general Sibling paragraph </p>
+    
+    
+
+
+
+
+
+	<!-- attr selectors  -->
+	<h1>Attr Selectors</h1>
+
+	<a href="#">GOOGLE 1</a>
+	<a href="#" target="_blank">GOOGLE 2</a>
+	<a href="#" class="anchor">Anchor GOOGLE 3</a><br><br>
+    
+	<form action="#">
+		<input type="text" placeholder="text">&nbsp&nbsp&nbsp
+		<input type="text" name="name" placeholder="text" >&nbsp&nbsp&nbsp
+		<input type="password" placeholder="password">
+	</form>
+
+</body>
+</html>

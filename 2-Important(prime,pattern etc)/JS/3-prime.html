@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+var n=17;
+var prime=1;
+for(i=2;i<n;i++)
+{
+	if(n%i==0){
+     prime=0;
+     break;
+	}
+}
+
+if(prime==1){
+	document.write(n+" prime no");
+}
+else{
+	document.write(n+"not prime no");
+}
+document.write("<br>")
+
+
+
+
+
+for(var i=2;i<=30;i++){
+    for(var j=2;j<i;j++){
+        if(i%j==0){
+            break;
+        }   
+    }
+    if(i==j){
+         document.writeln(i);
+    }
+}
+document.write("<br><br><br><br>");
+
+
+
+
+
+for(var a=2;a<=20;a++){
+var c=1;
+    for(var b=2;b<a;b++){
+        if(a%b==0){
+            c=0;
+            break;
+        }
+    }
+    if(c==1){
+        document.writeln(a);
+    }
+}
+document.write("<br>")
+
+
+
+var sum=0;
+for(var aa=2;aa<=20;aa++){
+var cc=1;
+    for(var bb=2;bb<aa;bb++){
+        if(aa%bb==0){
+            cc=0;
+            break;
+        }
+    }
+    if(cc==1){
+        sum=sum+aa;
+        document.writeln(aa);
+    }
+}
+document.write("= "+sum);
+
+
+    </script>
+</body>
+ 
+
+</html>

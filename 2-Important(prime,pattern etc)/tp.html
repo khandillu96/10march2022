@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p><b>PRINE NO</b></p>
+    
+    <script>
+        var sum=0;
+      for(var a=2;a<=5;a++){
+        var prime=0;
+
+        for(var b=2;b<a;b++){
+            if(a%b==0){
+                prime=1
+                break
+            }
+        }
+
+
+        if(prime==0){
+            sum=sum+a
+            document.writeln(a);
+        }
+      }
+      document.write("="+sum)
+    </script>
+</body>
+</html>
